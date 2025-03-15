@@ -1,38 +1,191 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  height: 100vh;
+}
+
+.contenedor {
+  width: 70vh;
+  background: white;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+          /*----- Header ----*/
+
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #007bff;
   color: white;
+  padding: 0px 10px;
+  border-radius: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.header h2{
+  width: 65%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.filtro {
+  background: #0056b3;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.formulario {
+  display: flex;
+  margin: 10px 0;
+}
+
+input[type="text"],.tarea-texto {
+  flex: 1;
+  padding: 2vh;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+.agregar {
+  background: #69b97c;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin-left: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+      /*----- Lista de tareas -----*/
+
+
+.lista-tareas {
+  list-style: none;
+  padding: 0;
+}
+
+.lista-tareas li {
+  display: flex;
+  align-items: center;
+  background: #f8f9fa;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.lista-tareas .completada {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.tarea-texto {
+  text-align: left;
+  padding: 0.3vh 2vh 0.3vh 0.3vh;
+  
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
+}
+
+.texto-modificar {
+  padding: 0.4vh;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+
+.editar, .eliminar, .actualizar {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.editar,.eliminar{
+  color: #b1afa8;
+}
+
+.actualizar {
+  background: #69b97c;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.notareas {
+  text-align: center;
+  color: gray;
+  
+}
+
+
+
+
+/*---------Media Queries---------*/
+
+@media (max-width: 599px) {
+  .contenedor {
+    width: 40vh;
   }
-  to {
-    transform: rotate(360deg);
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
   }
+
+  .header h2 {
+    font-size: 1.25rem;
+    width: 100%;
+    text-align: center;
+    padding-top: 1vh;
+  }
+
+  .filtro {
+    width: 30vh;
+    margin: 1vh 0vh 1vh 4vh;
+  }
+
+  .formulario {
+    flex-direction: column;
+  }
+
+  input[type="text"] {
+    margin-bottom: 10px;
+    padding: 0.7vh;
+  }
+
+  .agregar {
+    width: 38vh;
+  }
+
+  .lista-tareas li {
+    padding: 10px;
+    
+    align-items: flex-start;
+  }
+
+  .editar, .eliminar, .actualizar {
+    margin-right: 0;
+    margin-top: 0,5vh;
+    color: gray;
+
+  }
+  .actualizar {
+    background: #69b97c;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    width: 10vh;
+  }
+
 }
