@@ -18,7 +18,6 @@ const FormularioTareas = ({ tareas, setTareas }) => {
         placeholder="Escribe una tarea"
         value={nuevaTarea}
         onChange={(e) => setNuevaTarea(e.target.value)}
-        className="texto-introducir"
       />
       <button onClick={agregarTarea} className="agregar">
         <FontAwesomeIcon icon={faPlus} />
